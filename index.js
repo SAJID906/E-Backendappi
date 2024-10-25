@@ -27,7 +27,9 @@ app.use(cors({
   methods:["GET","POST","PUT",'DELETE'],
   credentials: true,
 }));
-
+app.get('/', (req, res) => {
+  res.send("GET Request Called")
+})
 // Route for user signup
 app.use('/signup', router);
 app.use('/login',router);
