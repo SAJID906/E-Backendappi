@@ -22,8 +22,10 @@ try {
 app.use(express.json());
 app.use(cookieParser())
 app.use(cors({
+  
+  origin: ['https://e-frontend-three.vercel.app/login'] ,// frontend's URL
+  methods:["GET","POST","PUT",'DELETE'],
   credentials: true,
-  origin: 'https://e-frontend-three.vercel.app' // frontend's URL
 }));
 
 // Route for user signup
