@@ -4,8 +4,5 @@
       { "src": "Backend/index.js", "use": "@vercel/node" },
       { "src": "frontend/public/index.html", "use": "@vercel/static" }
   ],
-  "routes": [
-      { "src": "/api/(.*)", "dest": "Backend/index.js" },
-      { "src": "/(.*)", "dest": "frontend/public/index.html" }
-  ]
+   "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }] 
 }
