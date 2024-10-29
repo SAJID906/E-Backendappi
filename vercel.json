@@ -4,8 +4,6 @@
       { "src": "Backend/index.js", "use": "@vercel/node" },
       { "src": "frontend/public/index.html", "use": "@vercel/static" }
   ],
-   "routes": [
-    { "src": "/[^.]+", "dest": "/", "status": 200 }] ,
-   "rewrites": [ { "src": "/(.*)", "dest": "/index.html" } ] 
+   "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }] ,
+   "rewrites": [ { "source": "/(.*)", "dest": "/index.html" } ] 
 }
-
